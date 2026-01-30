@@ -1,2 +1,2 @@
 # ImageToolbox
-Andy's collection of custom functions for image handling, processing, and analysis.
+Andy's collection of miscellaneous functions for image handling, processing, and analysis.
