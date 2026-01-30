@@ -5,12 +5,15 @@ function [bb] = impartition(imsize, tilesize)
 % rounded to perfectly fill the image.
 %
 % TO DO: 
-% (see lines 118 and 119 for implementations) Add 3rd input argument to
-% allow specification of how to handle tile rounding at image edges.
-% Option 1 - underfill the image with tiles and grow the last dimension of
-% tiles to fill remainder of image; Option 2 - overfill the image with
-% tiles and truncate the last dimension of tiles to match total image
-% size.
+% 1. (see lines 118 and 119 for implementations) Add optional input
+% argument to allow specification of how to handle tile rounding at image
+% edges. Option 1 - underfill the image with tiles and grow the last
+% dimension of tiles to fill remainder of image; Option 2 - overfill the
+% image with tiles and truncate the last dimension of tiles to match total
+% image size.
+% 2. (see lines 138 and 139) add optional input argument to specify return
+% of tile lengths (size) or tile bounds (positions). Lengths would return
+% min position and size, bounds would return min and max positions.
 %
 %
 % INPUTS:
@@ -136,3 +139,4 @@ function [bb] = impartition(imsize, tilesize)
     % bb = [tileMinOptions(optionCombinations), tileMaxOptions(optionCombinations)]; alternative output with max subscripts instead of lengths
 
 end
+
