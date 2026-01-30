@@ -37,10 +37,10 @@ function [bb] = impartition(imsize, tilesize)
 %         input image and requested tile size. Each row defines the
 %         bounding box or hyperrectangle of a tile, where the first
 %         D-elements specify the minumum bounds of a tile along each
-%         dimension (subscript ordering - row,col,page,...) and the last D-elements specify
-%         the tile's length along each dimension, like the input of imcrop
-%         or imcrop3. For example, given a 3D input image, each row of the
-%         output matrix BB will look like
+%         dimension (subscript ordering - row,col,page,...) and the last
+%         D-elements specify the tile's length along each dimension, like
+%         the input of imcrop or imcrop3. For example, given a 3D input
+%         image, each row of the output matrix BB will look like
 %         [rowMin,columnMin,pageMin,rowLength,columnLength,pageLength].
 %         Rounding error of tile positions or sizes near the image edge is
 %         handled by truncating the tiles in the last row/column/page/etc
@@ -135,6 +135,4 @@ function [bb] = impartition(imsize, tilesize)
     bb = [tileMinOptions(optionCombinations), tileLengthOptions(optionCombinations)]; % assemble tile bounds
     % bb = [tileMinOptions(optionCombinations), tileMaxOptions(optionCombinations)]; alternative output with max subscripts instead of lengths
 
-
 end
-
