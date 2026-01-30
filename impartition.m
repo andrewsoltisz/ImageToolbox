@@ -37,7 +37,7 @@ function [bb] = impartition(imsize, tilesize)
 %         input image and requested tile size. Each row defines the
 %         bounding box or hyperrectangle of a tile, where the first
 %         D-elements specify the minumum bounds of a tile along each
-%         dimension (subscript ordering) and the last D-elements specify
+%         dimension (subscript ordering - row,col,page,...) and the last D-elements specify
 %         the tile's length along each dimension, like the input of imcrop
 %         or imcrop3. For example, given a 3D input image, each row of the
 %         output matrix BB will look like
@@ -137,3 +137,4 @@ function [bb] = impartition(imsize, tilesize)
 
 
 end
+
